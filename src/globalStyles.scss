@@ -1,0 +1,43 @@
+body {
+    background: linear-gradient(0deg, #000 0%, #FFF 100%);
+}
+
+.bg-section {
+    overflow-x: hidden;
+
+    .bg-layer-container {
+        position: fixed;
+        transition: all 0.5s ease-out;
+
+        .bg-layer{
+            display: flex;
+            flex-direction: row;
+            position: absolute;
+
+            img {
+                flex: none;
+                width: 100vw;
+                height: 100vh;
+            }
+        }
+
+        #l1 {
+            inset: 300vh 0vw;
+        }
+        #l2 {
+            inset: 400vh 200vw;
+        }
+        #l3 {
+            inset: 300vh 300vw;
+        }
+        #l4 {
+            inset: 200vh 600vw;
+        }
+        #l5 {
+            inset: 100vh 600vw;
+        }
+        #l6 {
+            inset: 0vh 600vw;
+        }
+    }
+}
