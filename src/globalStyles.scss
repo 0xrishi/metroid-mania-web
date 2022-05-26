@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(0deg, #000 0%, #FFF 100%);
+    background: #ffffff;
 }
 
 .bg-section {
@@ -16,19 +16,21 @@ body {
 
             img {
                 flex: none;
-                width: 100vw;
+                // width: 100vw;
                 height: 100vh;
             }
         }
 
         #l1 {
-            inset: 300vh 0vw;
+            top: 300vh;
         }
         #l2 {
-            inset: 400vh 200vw;
+            top: 200vh;
+            left: 300vw;
         }
         #l3 {
-            inset: 300vh 300vw;
+            top: 300vh;
+            left: 500vw;
         }
         #l4 {
             inset: 200vh 600vw;

@@ -17,7 +17,13 @@ import frame13 from '../assets/bg/13.png';
 export default function Background() {
 
     const horizontalFrames = 9;
-    const verticalFrames = 2
+    // const verticalFrames = 2;
+
+    // var verticalMove, horizontalMove;
+
+    // const updateHorizontalPos = () => {
+        
+    // }
 
     const [scrollPosition, setScrollPosition] = useState();
     
@@ -26,6 +32,9 @@ export default function Background() {
         var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         var scrolled = (winScroll / height) * 100;
         setScrollPosition(scrolled);
+        // console.log(`H: ${scrolled * horizontalFrames}`);
+        // console.log(`V: ${scrolled * 3}`);
+        // console.log(`S: ${scrolled}`);
     };
 
     useEffect(() => {
@@ -39,19 +48,9 @@ export default function Background() {
     var verticalPos;
     var horizontalPos;
     // Layer 2
-    if (scrollPosition * horizontalFrames >= 200 && scrollPosition * horizontalFrames < 400) {
-        verticalPos = 4;
+    if (scrollPosition * horizontalFrames >= 300 && scrollPosition * horizontalFrames < 500) {
+        verticalPos = 2;
         horizontalPos = scrollPosition * horizontalFrames;
-    }
-    // Layer 4, 5, 6
-    else if (scrollPosition * horizontalFrames >= 600) {
-        if (scrollPosition * horizontalFrames < 700)
-            verticalPos = 2;
-        if (scrollPosition * horizontalFrames >= 700 && scrollPosition * horizontalFrames < 800)
-            verticalPos = 1;
-        if (scrollPosition * horizontalFrames > 800)
-            verticalPos = 0;
-        horizontalPos = 600;
     }
     // Layer 1, 3
     else {
@@ -68,26 +67,17 @@ export default function Background() {
                     <img src={frame1} alt="bg" />
                     <img src={frame2} alt="bg" />
                     <img src={frame3} alt="bg" />
+                    <img src={frame4} alt="bg" />
                 </div>
                 <div className="bg-layer" id="l2">
-                    <img src={frame4} alt="bg" />
                     <img src={frame5} alt="bg" />
                     <img src={frame6} alt="bg" />
+                    <img src={frame7} alt="bg" />
                 </div>
                 <div className="bg-layer" id="l3">
-                    <img src={frame7} alt="bg" />
                     <img src={frame8} alt="bg" />
                     <img src={frame9} alt="bg" />
                     <img src={frame10} alt="bg" />
-                </div>
-                <div className="bg-layer" id="l4">
-                    <img src={frame11} alt="bg" />
-                </div>
-                <div className="bg-layer" id="l5">
-                    <img src={frame12} alt="bg" />
-                </div>
-                <div className="bg-layer" id="l6">
-                    <img src={frame13} alt="bg" />
                 </div>
             </div>
         </section>
