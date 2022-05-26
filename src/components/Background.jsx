@@ -9,10 +9,10 @@ import frame6 from '../assets/bg/6.png';
 import frame7 from '../assets/bg/7.png';
 import frame8 from '../assets/bg/8.png';
 import frame9 from '../assets/bg/9.png';
-import frame10 from '../assets/bg/10.png';
-import frame11 from '../assets/bg/11.png';
-import frame12 from '../assets/bg/12.png';
-import frame13 from '../assets/bg/13.png';
+// import frame10 from '../assets/bg/10.png';
+// import frame11 from '../assets/bg/11.png';
+// import frame12 from '../assets/bg/12.png';
+// import frame13 from '../assets/bg/13.png';
 
 export default function Background() {
 
