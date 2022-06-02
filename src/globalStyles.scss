@@ -3,43 +3,111 @@ body {
 }
 
 .bg-section {
+    background-color: aqua;
+    width: 100%;
     overflow-x: hidden;
+    z-index: -1;
 
-    .bg-layer-container {
+    p {
         position: fixed;
-        transition: all 0.5s ease-out;
+        padding: 1rem;
+        background: hsla(0, 0, 0%, 0.5);
+        color: #ffffff;
+        z-index: 100;
+    }
 
-        .bg-layer{
+    .bg-container {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        transition: all 0.2s ease-out;
+
+        .frame-layer-horizontal {
             display: flex;
-            flex-direction: row;
-            position: absolute;
 
-            img {
-                flex: none;
-                // width: 100vw;
+            .bg-frame {
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: bottom;
                 height: 100vh;
+                width: max(100vw, 178vh);
+                outline: 5px solid red;
             }
         }
 
-        #l1 {
-            top: 300vh;
+        .frame-layer-vertical {
+            display: flex;
+            flex-direction: column-reverse;
+
+            .bg-frame {
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: bottom;
+                height: 100vh;
+                width: max(100vw, 178vh);
+                outline: 5px solid rgb(0, 255, 13);
+            }
         }
+
         #l2 {
-            top: 200vh;
-            left: 300vw;
+            align-self: flex-start;
         }
         #l3 {
-            top: 300vh;
-            left: 500vw;
+            align-self: flex-start;
         }
         #l4 {
-            inset: 200vh 600vw;
+            align-self: flex-start;
         }
-        #l5 {
-            inset: 100vh 600vw;
-        }
-        #l6 {
-            inset: 0vh 600vw;
-        }
+    }
+}
+
+// Player
+.player-container {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 50;
+    inset: 0 auto auto 0;
+
+    div {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -20%);
+        width: 264px;
+        height: 264px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+    }
+
+    .run {
+        animation: frame-change 1s infinite steps(7);
+    }
+}
+
+@keyframes frame-change {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -2688px 0;
+    }
+}
+
+.barrel-elevator {
+    position: fixed;
+    inset: 0 max(300vw, calc(178*3vh));
+    z-index: 10;
+    width: 100%;
+    height: 100vh;
+    transition: all 0.2s ease-out;
+
+    img {
+        position: absolute;
+        inset: 60% 50%;
+        transform: translate(-50%, -50%);
     }
 }
