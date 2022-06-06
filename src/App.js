@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import Background from "./components/Background";
 import Player from './components/Player';
 import BarrelElevator from "./components/BarrelElevator";
+import NavLinks from './components/NavLinks';
 
 function App() {
   // Scroll Logic
@@ -28,6 +29,7 @@ function App() {
       <Background scrollPosition={scrollPosition}/>
       <BarrelElevator scrollPosition={scrollPosition}/>
       <Player scrollPosition={scrollPosition} />
+      <NavLinks />
     </div>
   );
 }

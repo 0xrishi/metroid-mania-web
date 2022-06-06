@@ -3,10 +3,14 @@ body {
 }
 
 .bg-section {
-    background-color: aqua;
+    // max-width: 85vw;
+    // aspect-ratio: 16 / 9;
+    // margin: 5rem auto;
+    // background: #000;
     width: 100%;
     overflow-x: hidden;
     z-index: -1;
+
 
     p {
         position: fixed;
@@ -18,48 +22,40 @@ body {
 
     .bg-container {
         position: fixed;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(7, 1fr);
 
-        transition: all 0.2s ease-out;
+        // transition: all 0.2s ease-out;
 
         .frame-layer-horizontal {
             display: flex;
-
-            .bg-frame {
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position: bottom;
-                height: 100vh;
-                width: max(100vw, 178vh);
-                outline: 5px solid red;
-            }
+            // height: min-content;
         }
 
         .frame-layer-vertical {
             display: flex;
             flex-direction: column-reverse;
-
-            .bg-frame {
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position: bottom;
-                height: 100vh;
-                width: max(100vw, 178vh);
-                outline: 5px solid rgb(0, 255, 13);
-            }
+            // height: min-content;
+        }
+        .bg-frame {
+            background-size: cover;
+            background-position: bottom;
+            background-repeat: no-repeat;
+            height: 100vh;
+            width: max(100vw, 178vh);
+            // aspect-ratio: 16 / 9;
+            outline: 5px solid red;
         }
 
-        #l2 {
-            align-self: flex-start;
-        }
-        #l3 {
-            align-self: flex-start;
-        }
-        #l4 {
-            align-self: flex-start;
-        }
+        #l1 { grid-area: 3 / 1 / 4 / 2; }
+        #l2 { grid-area: 2 / 2 / 4 / 3; }
+        #l3 { grid-area: 2 / 3 / 3 / 4; }
+        #l4 { grid-area: 2 / 4 / 4 / 5; }
+        #l5 { grid-area: 3 / 5 / 4 / 6; }
+        #l6 { grid-area: 3 / 6 / 8 / 7; }
+        #l7 { grid-area: 7 / 7 / 8 / 8; }
+        #l8 { grid-area: 1 / 8 / 8 / 9; }
     }
 }
 
@@ -111,3 +107,4 @@ body {
         transform: translate(-50%, -50%);
     }
 }
+
